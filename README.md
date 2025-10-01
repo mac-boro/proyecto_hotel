@@ -5,5 +5,6 @@
     <li><b>mysql-connector-python 9.4.0</b>
     Comando instalación: <pre><code>>pip install mysql-connector-python</code></pre>
     </li>
-    <li>prettytable 3.16.0</br>
-    Comando instalación: pip install prettytable
+    <li><b>prettytable 3.16.0</b>
+    <br>Comando instalación:</br> <pre><code>>pip install prettytable</code></pre>
+    </li>
