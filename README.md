@@ -1,5 +1,6 @@
 # proyecto_hotel
-Hotel: un hotel desea informatizar reservas y hospedajes.
+<h2>Hotel: un hotel desea informatizar reservas y hospedajes.</h2>
+<h3>Auxiliares/Utilidades</h3>
 <ul>
     <li><b>mysql-connector-python 9.4.0</b>
     Comando instalación: <pre><code>>pip install mysql-connector-python</code></pre>
