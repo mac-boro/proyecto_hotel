@@ -8,4 +8,3 @@ def menu_principal():
     print('[1] Reservar Habitaciones')
     print('[1] Reservar Habitaciones')
     print('[0] Salir')
-     
