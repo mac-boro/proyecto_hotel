@@ -1,0 +1,81 @@
+create table if not exists huesped(
+    id INT auto_increment,
+    nombre VARCHAR(150) NOT NULL,
+    apellido VARCHAR(150) NOT NULL,
+    telefono INT NOT NULL,
+    email VARCHAR(250) NOT NULL,
+
+    CONSTRAINT pk_huesped PRIMARY KEY (id)   
+);
+create table if not exists empleado(
+    id INT auto_increment,
+    nombre VARCHAR(150) NOT NULL,
+    apellido VARCHAR(150) NOT NULL,
+    telefono INT NOT NULL,
+    puesto VARCHAR(50) NOT NULL,
+    salario INT NOT NULL
+
+    CONSTRAINT pk_empleado PRIMARY KEY (id)
+);
+create table if not exists habitacion(
+    id INT auto_increment,
+    numero INT NOT NULL,
+    tipo VARCHAR(50) NOT NULL,
+    precio INT NOT NULL,
+    disponibilidad BOOLEAN NOT NULL,
+
+    CONSTRAINT pk_habitacion PRIMARY KEY (id)
+);
+create table if not exists servicio(
+    id INT auto_increment,
+    nombre VARCHAR(150) NOT NULL,
+    precio VARCHAR(150) NOT NULL,
+
+    CONSTRAINT pk_servicio PRIMARY KEY (id) 
+);
+create table if not exists descuento(
+    id INT auto_increment,
+    porcentaje INT NOT NULL,
+    descripcion VARCHAR(250) NOT NULL
+
+    CONSTRAINT pk_descuento PRIMARY KEY (id)
+);
+create table if not exists hotel(
+    id INT auto_increment,
+
+    CONSTRAINT pk_hotel PRIMARY KEY (id)
+);
+create table if not exists reserva(
+    id INT NOT NULL,
+    id_huesped INT NOT NULL,
+    id_habitacion INT NOT NULL,
+    porcentaje_descuento INT NOT NULL,
+    precio_servicios INT NOT NULL,
+    fecha_entrada DATETIME NOT NULL,
+    fecha_salida DATETIME NOT NULL,
+    total INT NOT NULL,
+
+    CONSTRAINT pk_reserva PRIMARY KEY (id),
+    CONSTRAINT fk_reserva_huesped FOREIGN KEy (id_huesped) REFERENCES huesped(id),
+    CONSTRAINT fk_reserva_habitacion FOREIGN KEY (id_habitacion) REFERENCES habitacion(id),
+    CONSTRAINT fk_reserva_porcentaje FOREIGN KEY (porcentaje_descuento) REFERENCES descuento(porcentaje),
+    CONSTRAINT fk_reserva_servicio FOREIGN KEY (precio_servicios) REFERENCES servicio(precio)
+);
+create table if not exists factura(
+    id INT auto_increment,
+    id_reserva INT NOT NULL,
+
+    CONSTRAINT pk_factura PRIMARY KEY (id),
+    CONSTRAINT fk_factura_reserva FOREIGN KEY (id_reserva) REFERENCES reserva(id),
+);
+create table if not exists pago(
+    id INT auto_increment,
+    id_factura INT NOT NULL.
+    total_reserva INT NOT NULL,
+    metodo_pago VARCHAR(50) NOT NULL,
+    fecha_pago DATETIME NOT NULL, 
+    pendiente BOOLEAN NOT NULL,
+
+    CONSTRAINT pk_pago PRIMARY KEY (id),
+    CONSTRAINT fk_factura_reserva_total FOREIGN KEY (total_reserva) REFERENCES reserva(total)
+);
