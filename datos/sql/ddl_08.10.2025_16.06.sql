@@ -42,6 +42,8 @@ create table if not exists descuento(
 );
 create table if not exists hotel(
     id INT auto_increment,
+    nombre VARCHAR(250) NOT NULL,
+    direccion VARCHAR(250) NOT NULL,
 
     CONSTRAINT pk_hotel PRIMARY KEY (id)
 );
@@ -50,7 +52,7 @@ create table if not exists reserva(
     id_huesped INT NOT NULL,
     id_habitacion INT NOT NULL,
     porcentaje_descuento INT NOT NULL,
-    precio_servicios INT NOT NULL,
+    precio_servicio INT NOT NULL,
     fecha_entrada DATETIME NOT NULL,
     fecha_salida DATETIME NOT NULL,
     total INT NOT NULL,
@@ -59,7 +61,7 @@ create table if not exists reserva(
     CONSTRAINT fk_reserva_huesped FOREIGN KEY (id_huesped) REFERENCES huesped(id),
     CONSTRAINT fk_reserva_habitacion FOREIGN KEY (id_habitacion) REFERENCES habitacion(id),
     CONSTRAINT fk_reserva_porcentaje FOREIGN KEY (porcentaje_descuento) REFERENCES descuento(id),
-    CONSTRAINT fk_reserva_servicio FOREIGN KEY (precio_servicios) REFERENCES servicio(id)
+    CONSTRAINT fk_reserva_servicio FOREIGN KEY (precio_servicio) REFERENCES servicio(id)
 );
 create table if not exists factura(
     id INT auto_increment,
