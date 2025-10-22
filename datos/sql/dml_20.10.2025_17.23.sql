@@ -1,4 +1,4 @@
-INSERT INTO table huesped(nombre, apellido, telefono, email) VALUES 
+INSERT INTO huesped(nombre, apellido, telefono, email) VALUES 
 ('Ana', 'García', '954431001', 'anagarcia@email.com'),
 ('Luis', 'Pérez', '954431002', 'luisperez@email.com'),
 ('Sofía', 'Martínez', '954431003', 'sofiamartinez@email.com'),
@@ -20,7 +20,7 @@ INSERT INTO table huesped(nombre, apellido, telefono, email) VALUES
 ('Martina', 'Ortega', '954431019', 'martina.o@email.com'),
 ('Nicolás', 'Guerrero', '954431020', 'nicolasg@email.com');
 
-INSERT INTO table empleado(nombre, apellido, telefono, puesto, salario) VALUES
+INSERT INTO empleado(nombre, apellido, telefono, puesto, salario) VALUES
 -- (10 Personal de Limpieza)
 ('Roberto', 'Salas', '954432001', 'Jefe Personal de Limpieza', 550000),
 ('Juan', 'Soto', '954432002', 'Personal de Limpieza', 550000),
@@ -56,7 +56,7 @@ INSERT INTO table empleado(nombre, apellido, telefono, puesto, salario) VALUES
 ('Yolanda', 'Méndez', '954432029', 'Lavandería', 1250.00),
 ('Zacarías', 'Naranjo', '954432030', 'Electricista', 1500.00);
 
-INSERT INTO table habitacion(numero, tipo,  precio, disponibilidad) VALUES
+INSERT INTO habitacion(numero, tipo,  precio, disponibilidad) VALUES
 -- 40 Estándar ($40000)
 (101, 'Estándar', 40000, TRUE), 
 (102, 'Estándar', 40000, FALSE), 
@@ -155,16 +155,16 @@ INSERT INTO table habitacion(numero, tipo,  precio, disponibilidad) VALUES
 (501, 'Suite Presidencial', 500000, TRUE),
 (502, 'Suite Presidencial', 500000, TRUE);
 
-INSERT INTO table servicio(nombre, precio) VALUES
-('Comida a la Habitación', 10000)
-('Masaje Relajante (60 min)', 50000)
+INSERT INTO servicio(nombre, precio) VALUES
+('Comida a la Habitación', 10000),
+('Masaje Relajante (60 min)', 50000);
 
-INSERT INTO table descuento(porcentaje, descripcion) VALUES
+INSERT INTO descuento(porcentaje, descripcion) VALUES
 (15000, 'Cyber Day 2025'),
 (10000, 'Descuento por Fiestas Patrias'),
 (20000, 'Promoción de Fin de Semana'),
 (5000, 'Lealtad (Reservas frecuentes)'),
 (25000, 'Oferta de Último Minuto');
 
-INSERT INTO table hotel(nombre, direccion) VALUES
+INSERT INTO hotel(nombre, direccion) VALUES
 ('Gran Hotel xd', 'Av. Falsa 123, Área Limítrofe');
