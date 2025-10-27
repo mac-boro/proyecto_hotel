@@ -9,6 +9,9 @@
 <h4>Un hotel desea informatizar reservas y hospedajes.</h4>
 <h3>Auxiliares/Utilidades</h3>
 <ul>
+    <li><b>sqlalchemy 0.0.0</b>
+    <br>Comando instalación:</br> <pre><code>pip install sqlalchemy</code></pre>
+    </li>
     <li><b>mysql-connector-python 9.4.0</b>
     <br>Comando instalación:</br> <pre><code>pip install mysql-connector-python</code></pre>
     </li>
