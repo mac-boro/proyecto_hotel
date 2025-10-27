@@ -1,10 +1,11 @@
-class Pago:
-    def __init__(self, id_pago, cliente, monto, metodo_pago, fecha_pago):
-        self.id_pago = id_pago
-        self.cliente = cliente
-        self.monto = monto
-        self.metodo_pago = metodo_pago  # Ej: "Tarjeta de crédito", "Efectivo"
-        self.fecha_pago = fecha_pago
+from sqlalchemy import Column, Integer, String, DateTime, Boolean, ForeignKey
+from .base import Base
 
-    def __str__(self):
-        return f"Pago {self.id_pago} - Cliente: {self.cliente.nombre} - Monto: ${self.monto} - Método de pago: {self.metodo_pago}"
+class Pago(Base):
+    __tablename__ = "pago"
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    id_factura = Column(Integer, ForeignKey("factura.id"), nullable=False)
+    metodo_pago = Column(String(50), nullable=False)
+    fecha_pago = Column(DateTime, nullable=False)
+    pendiente = Column(Boolean, nullable=False)
+

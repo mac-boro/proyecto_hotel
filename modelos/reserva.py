@@ -1,21 +1,14 @@
-class Reserva:
-    def __init__(self, id_reserva, cliente, habitacion, fecha_inicio, fecha_fin):
-        self.id_reserva = id_reserva
-        self.cliente = cliente
-        self.habitacion = habitacion
-        self.fecha_inicio = fecha_inicio
-        self.fecha_fin = fecha_fin
-        self.estado = "Confirmada"  # Puede ser "Confirmada", "Cancelada", "Finalizada"
-    
-    def cancelar(self):
-        """Cancelar la reserva."""
-        self.estado = "Cancelada"
-        self.habitacion.liberar()
+from sqlalchemy import Column, Integer, DateTime, ForeignKey
+from .base import Base
 
-    def finalizar(self):
-        """Finalizar la reserva y liberar la habitación."""
-        self.estado = "Finalizada"
-        self.habitacion.liberar()
+class Reserva(Base):
+    __tablename__ = "reserva"
 
-    def __str__(self):
-        return f"Reserva {self.id_reserva} - Cliente: {self.cliente.nombre} - Habitación: {self.habitacion.numero} - Estado: {self.estado}"
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    id_huesped = Column(Integer, ForeignKey("huesped.id"), nullable=False)
+    id_habitacion = Column(Integer, ForeignKey("habitacion.id"), nullable=False)
+    id_descuento = Column(Integer, ForeignKey("descuento.id"), nullable=False)  
+    id_servicio = Column(Integer, ForeignKey("servicio.id"), nullable=False)   
+    fecha_entrada = Column(DateTime, nullable=False)
+    fecha_salida = Column(DateTime, nullable=False)
+    total = Column(Integer, nullable=False)

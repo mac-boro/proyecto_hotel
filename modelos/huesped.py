@@ -1,12 +1,11 @@
 from sqlalchemy import Column, Integer, String
 from .base import Base
 
-class Empleado(Base):
-    __tablename__ = "empleado"
+class Huesped(Base):
+    __tablename__ = "huesped"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     nombre = Column(String(150), nullable=False)
     apellido = Column(String(150), nullable=False)
-    telefono = Column(Integer, nullable=False)
-    puesto = Column(String(50), nullable=False)
-    salario = Column(Integer, nullable=False)
+    telefono = Column(Integer, nullable=False)   
+    email = Column(String(250), nullable=False)
