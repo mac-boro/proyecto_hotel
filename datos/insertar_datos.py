@@ -11,5 +11,3 @@ def insertar_objeto(objeto):
         print(f"Error al insertar el objeto: {e}")
     finally:
         sesion.close()
-
-

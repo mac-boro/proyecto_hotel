@@ -11,7 +11,7 @@ def insertar_huesped():
     respuesta = obtener_huesped_nombre(nombre)
     if respuesta == None:
         # INSTANCIA DE CLASE
-        nuevo_huesped = Husped(nombre=nombre.title(), apellido=apellido.title(), telefono=telefono.title(), email=email.title())
+        nuevo_huesped = Huesped(nombre=nombre.title(), apellido=apellido.title(), telefono=telefono, email=email.title())
         insertar_objeto(nuevo_huesped)
     else:
         print('Su huesped YA existe en base de datos.')
