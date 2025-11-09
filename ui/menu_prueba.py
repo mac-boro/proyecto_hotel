@@ -1,13 +1,15 @@
+from negocio.habitacion_read import lista_habitaciones
 from negocio.huesped_create import insertar_huesped
 from datos.conexion import sesion
+from auxiliares.info_aplicacion import nombre_aplicacion
+from auxiliares.version import numero_version
 
 def menu_prueba():
-    """Presenta el menú de opciones al usuario, usando un flag booleano en lugar de break."""
     ejecutando = True 
     while ejecutando:
-        print("\n==================================")
-        print("  SISTEMA DE GESTIÓN HOTELERA (v1.0)")
-        print("==================================")
+        print("\n======================================")
+        print("{} v{}".format(nombre_aplicacion, numero_version))
+        print("======================================")
         print("1. Crear Nueva Reserva (incl. Servicios/Desc.)")
         print("2. Listar Reservas")
         print("3. Registrar Nuevo Huésped")
@@ -21,7 +23,7 @@ def menu_prueba():
             print("")
         elif opcion == '2':
             #listar_reservas()
-            print("")
+            lista_habitaciones()
         elif opcion == '3':
             insertar_huesped()
         elif opcion == '4':

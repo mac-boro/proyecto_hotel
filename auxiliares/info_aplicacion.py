@@ -1,1 +1,1 @@
-nombre_aplicacion = 'Sistema gestion de hotel'
+nombre_aplicacion = 'Sistema de Gestion Hotelera 🎴 '

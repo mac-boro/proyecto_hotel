@@ -1,4 +1,5 @@
-INSERT INTO huesped(nombre, apellido, telefono, email) VALUES 
+INSERT INTO huesped(nombre, apellido, telefono, email) VALUES
+--(20 Huespedes) 
 ('Ana', 'García', '954431001', 'anagarcia@email.com'),
 ('Luis', 'Pérez', '954431002', 'luisperez@email.com'),
 ('Sofía', 'Martínez', '954431003', 'sofiamartinez@email.com'),
