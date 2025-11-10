@@ -1,5 +1,6 @@
 from negocio.habitacion_read import lista_habitaciones
 from negocio.huesped_create import insertar_huesped
+from negocio.habitación_update import crear_reserva
 from datos.conexion import sesion
 from auxiliares.info_aplicacion import nombre_aplicacion
 from auxiliares.version import numero_version
@@ -19,7 +20,7 @@ def menu_principal():
         opcion = input("\nSeleccione una opción: ")
         
         if opcion == '1':
-            #crear_reserva()
+            crear_reserva()
             print("Opción no disponbile temporalmente. 😵")
             ejecutando = False
         elif opcion == '2':
