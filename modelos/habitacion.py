@@ -8,4 +8,4 @@ class Habitacion(Base):
     numero = Column(Integer, nullable=False)
     tipo = Column(String(50), nullable=False)
     precio = Column(Integer, nullable=False)
-    disponibilidad = Column(Boolean, nullable=False)
+    habilitado = Column(Boolean, nullable=False)

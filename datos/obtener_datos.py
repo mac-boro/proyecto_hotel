@@ -23,7 +23,7 @@ def obtener_huesped_nombre(nombre_huesped):
     huesped_encontrado = None
     if listado_huesped:
         for nombre in listado_huesped:
-            if normalizar_cadena(nombre.nombre_huesped) == normalizar_cadena(nombre_huesped):
+            if normalizar_cadena(nombre.nombre) == normalizar_cadena(nombre_huesped):
                 huesped_encontrado = nombre
                 break
     return huesped_encontrado

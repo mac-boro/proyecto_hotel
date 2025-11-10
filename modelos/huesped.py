@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, Boolean
 from .base import Base
 
 class Huesped(Base):
@@ -9,3 +9,4 @@ class Huesped(Base):
     apellido = Column(String(150), nullable=False)
     telefono = Column(Integer, nullable=False)   
     email = Column(String(250), nullable=False)
+    habilitado = Column(Boolean, nullable=False)

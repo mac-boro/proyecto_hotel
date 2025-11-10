@@ -22,7 +22,6 @@ create table if not exists habitacion(
     numero INT NOT NULL,
     tipo VARCHAR(50) NOT NULL,
     precio INT NOT NULL,
-    disponibilidad BOOLEAN NOT NULL,
 
     CONSTRAINT pk_habitacion PRIMARY KEY (id)
 );
