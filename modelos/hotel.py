@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, Boolean
 from .base import Base
 
 class Hotel(Base):
@@ -7,4 +7,5 @@ class Hotel(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     nombre = Column(String(250), nullable=False)
     direccion = Column(String(250), nullable=False)
+    habilitado = Column(Boolean, nullable=False)
 

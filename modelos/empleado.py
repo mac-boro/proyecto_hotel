@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, Boolean
 from .base import Base
 
 class Empleado(Base):
@@ -10,3 +10,4 @@ class Empleado(Base):
     telefono = Column(Integer, nullable=False)
     puesto = Column(String(50), nullable=False)
     salario = Column(Integer, nullable=False)
+    habilitado = Column(Boolean, nullable=False)
