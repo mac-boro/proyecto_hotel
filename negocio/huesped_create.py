@@ -26,10 +26,9 @@ def insertar_huesped_reserva():
     if respuesta == None:
         telefono = ingresar_telefono_huesped()
         email = ingresar_email_huesped()
-        # INSTANCIA DE CLASE
         nuevo_huesped = Huesped(nombre=nombre.title(), apellido=apellido.title(), telefono=telefono, email=email)
         insertar_objeto(nuevo_huesped)
-        return(nuevo_huesped)
+        return(nuevo_huesped.id)
     else:
         print(respuesta)
-        return(sesion.query(Huesped).filter_by(nombre=respuesta).all())
+        return(respuesta.id)

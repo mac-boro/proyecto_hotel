@@ -31,8 +31,9 @@ def solicitar_servicio():
         if opcion == '1':
             print(listar_servicios())
             id = int(input(obtener_entero_valido('Ingrese el ID del servicio solicitado: ')))
-            return(sesion.query(Servicio).filter_by(id=id).all())
+            return(id)
         elif opcion == '2':
-            return(sesion.query(Servicio).filter_by(id=1).all())
+            id = 1
+            return(id)
         else:
             print('Ingrese una opción valida [1 o 2]')
