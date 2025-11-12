@@ -157,10 +157,12 @@ INSERT INTO habitacion(numero, tipo,  precio, disponibilidad) VALUES
 (502, 'Suite Presidencial', 500000, TRUE);
 
 INSERT INTO servicio(nombre, precio) VALUES
+('Ninguno', 0)
 ('Comida a la Habitación', 10000),
 ('Masaje Relajante (60 min)', 50000);
 
 INSERT INTO descuento(porcentaje, descripcion) VALUES
+(0, 'Ninguno')
 (15000, 'Cyber Day 2025'),
 (10000, 'Descuento por Fiestas Patrias'),
 (20000, 'Promoción de Fin de Semana'),
