@@ -34,8 +34,8 @@ create table if not exists servicio(
 );
 create table if not exists descuento(
     id INT auto_increment,
+    nombre VARCHAR(250) NOT NULL,
     porcentaje INT NOT NULL,
-    descripcion VARCHAR(250) NOT NULL,
 
     CONSTRAINT pk_descuento PRIMARY KEY (id)
 );

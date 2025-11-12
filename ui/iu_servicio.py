@@ -1,7 +1,24 @@
-from negocio.servicios_read import listar_servicios
+from negocio.servicio_read import listar_servicios
 from auxiliares.validar_entero import obtener_entero_valido
+from auxiliares.validar_float import obtener_float_valido
 from datos.conexion import sesion
 from modelos.servicio import Servicio
+
+def ingresar_nombre_servicio():
+    nombre = input('Ingrese el nombre del servicio: ')
+    return(nombre)
+
+def ingresar_precio_servicio():
+    precio = float(obtener_float_valido('Ingrese el precio del servicio: $'))
+    return(precio)
+
+def ingresar_nuevo_nombre_servicio():
+    nombre = input('Ingrese el nuevo nombre del servicio: ')
+    return(nombre)
+
+def ingresar_nuevo_precio_servicio():
+    precio = float(obtener_float_valido('Ingrese el nuevo precio del servicio: $'))
+    return(precio)
 
 def solicitar_servicio():
     print('¿Desea agregar servicios a su reserva?')

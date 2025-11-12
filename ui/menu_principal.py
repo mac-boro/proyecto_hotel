@@ -1,6 +1,11 @@
+from negocio.reserva_create import crear_reserva
 from negocio.habitacion_read import lista_habitaciones
 from negocio.huesped_create import insertar_huesped
-from negocio.reserva_create import crear_reserva
+from negocio.huesped_update import modificar_huesped
+from negocio.servicio_create import insertar_servicio
+from negocio.servicio_update import modificar_servicio
+from negocio.descuento_create import insertar_descuento
+from negocio.descuento_update import modificar_descuento
 from datos.conexion import sesion
 from auxiliares.info_aplicacion import nombre_aplicacion
 from auxiliares.version import numero_version
@@ -43,7 +48,6 @@ def menu_principal():
         
         if opcion == '1':
             crear_reserva()
-            print("Opción no disponbile temporalmente. 😵")
         elif opcion == '2':
             #extender_reservas()
             print("Opción no disponbile temporalmente. 😵")
@@ -55,26 +59,21 @@ def menu_principal():
         elif opcion == '5':
             insertar_huesped()
         elif opcion == '6':
-            #modificar_huesped()
-            print("Opción no disponbile temporalmente. 😵")
+            modificar_huesped()
         elif opcion == '7':
-            #crear_factura()
+            #insertar_factura()
             print("Opción no disponbile temporalmente. 😵")
         elif opcion == '8':
-            #listar_reserva
+            #insertar_pago()
             print("Opción no disponbile temporalmente. 😵")
         elif opcion == '9':
-            #listar_reservas(
-            print("Opción no disponbile temporalmente. 😵")
+            insertar_servicio()
         elif opcion == '10':
-            #listar_reservas(
-            print("Opción no disponbile temporalmente. 😵")
+            modificar_servicio()
         elif opcion == '11':
-            #listar_reservas(
-            print("Opción no disponbile temporalmente. 😵")
+            insertar_descuento()
         elif opcion == '12':
-            #listar_reservas(
-            print("Opción no disponbile temporalmente. 😵")
+            modificar_descuento()
         elif opcion == '13':
             print("Saliendo del sistema. ¡Hasta pronto!")
             ejecutando = False 

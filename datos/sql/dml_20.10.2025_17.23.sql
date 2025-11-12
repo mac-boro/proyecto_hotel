@@ -161,13 +161,13 @@ INSERT INTO servicio(nombre, precio) VALUES
 ('Comida a la Habitación', 10000),
 ('Masaje Relajante (60 min)', 50000);
 
-INSERT INTO descuento(porcentaje, descripcion) VALUES
-(0, 'Ninguno')
-(15000, 'Cyber Day 2025'),
-(10000, 'Descuento por Fiestas Patrias'),
-(20000, 'Promoción de Fin de Semana'),
-(5000, 'Lealtad (Reservas frecuentes)'),
-(25000, 'Oferta de Último Minuto');
+INSERT INTO descuento(nombre, porcentaje) VALUES
+('Ninguno', 0)
+('Cyber Day 2025', 15),
+('Descuento por Fiestas Patrias', 10),
+('Promoción de Fin de Semana', 20),
+('Lealtad (Reservas frecuentes)', 5),
+('Oferta de Último Minuto', 25);
 
 INSERT INTO hotel(nombre, direccion) VALUES
 ('Gran Hotel xd', 'Av. Falsa 123, Área Limítrofe');
