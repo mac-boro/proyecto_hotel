@@ -2,6 +2,7 @@ from datos.conexion import sesion
 from modelos.huesped import Huesped
 from modelos.servicio import Servicio
 from modelos.descuento import Descuento
+from modelos.habitacion import Habitacion
 from auxiliares.normalizar_cadena import normalizar_cadena
 
 def obtener_objeto_hab(objeto):
@@ -49,3 +50,13 @@ def obtener_descuento_nombre(nombre_descuento):
                 descuento_encontrado = nombre
                 break
     return descuento_encontrado
+
+def obtener_habitacion_id(id_habitacion):
+    listado_habitacion = obtener_objeto_hab(Habitacion)
+    habitacion_encontrado = None
+    if listado_habitacion:
+        for id in listado_habitacion:
+            if id.id == id_habitacion:
+                habitacion_encontrado = id
+                break
+    return habitacion_encontrado
