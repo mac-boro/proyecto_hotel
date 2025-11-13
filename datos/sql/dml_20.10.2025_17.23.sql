@@ -1,5 +1,5 @@
 INSERT INTO huesped(nombre, apellido, telefono, email) VALUES
---(20 Huespedes) 
+-- (20 Huespedes) 
 ('Ana', 'García', '954431001', 'anagarcia@email.com'),
 ('Luis', 'Pérez', '954431002', 'luisperez@email.com'),
 ('Sofía', 'Martínez', '954431003', 'sofiamartinez@email.com'),
@@ -57,7 +57,7 @@ INSERT INTO empleado(nombre, apellido, telefono, puesto, salario) VALUES
 ('Yolanda', 'Méndez', '954432029', 'Lavandería', 1250.00),
 ('Zacarías', 'Naranjo', '954432030', 'Electricista', 1500.00);
 
-INSERT INTO habitacion(numero, tipo,  precio, disponibilidad) VALUES
+INSERT INTO habitacion(numero, tipo,  precio, habilitado) VALUES
 -- 40 Estándar ($40000)
 (101, 'Estándar', 40000, TRUE), 
 (102, 'Estándar', 40000, FALSE), 
@@ -157,12 +157,12 @@ INSERT INTO habitacion(numero, tipo,  precio, disponibilidad) VALUES
 (502, 'Suite Presidencial', 500000, TRUE);
 
 INSERT INTO servicio(nombre, precio) VALUES
-('Ninguno', 0)
+('Ninguno', 0),
 ('Comida a la Habitación', 10000),
 ('Masaje Relajante (60 min)', 50000);
 
 INSERT INTO descuento(nombre, porcentaje) VALUES
-('Ninguno', 0)
+('Ninguno', 0),
 ('Cyber Day 2025', 15),
 ('Descuento por Fiestas Patrias', 10),
 ('Promoción de Fin de Semana', 20),

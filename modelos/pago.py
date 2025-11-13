@@ -8,4 +8,4 @@ class Pago(Base):
     metodo_pago = Column(String(50), nullable=False)
     fecha_pago = Column(DateTime, nullable=False)
     pendiente = Column(Boolean, nullable=False)
-
+    habilitado = Column(Boolean, nullable=False)

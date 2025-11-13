@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, DateTime, ForeignKey
+from sqlalchemy import Column, Integer, DateTime, ForeignKey, Boolean
 from .base import Base
 
 class Reserva(Base):
@@ -12,3 +12,4 @@ class Reserva(Base):
     fecha_entrada = Column(DateTime, nullable=False)
     fecha_salida = Column(DateTime, nullable=False)
     total = Column(Integer, nullable=False)
+    habilitado = Column(Boolean, nullable=False)
