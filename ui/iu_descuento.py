@@ -22,15 +22,17 @@ def solicitar_descuento():
     print('[1] Si')
     print('[2] No')
 
-    opcion = input('\nSeleccione una opción [1 o 2]: ')
     opcion_valida = False
-    while opcion == False:
+    while opcion_valida == False:
+        opcion = input('\nSeleccione una opción [1 o 2]: ')
         if opcion == '1':
             print(listar_descuentos())
             id = int(input(obtener_entero_valido('Ingrese el ID del descuento solicitado: ')))
+            opcion_valida = True
             return(id)
         elif opcion == '2':
             id = 1
+            opcion_valida = True
             return(id)
         else:
             print('Ingrese una opción valida [1 o 2]')

@@ -25,9 +25,9 @@ def solicitar_servicio():
     print('[1] Si')
     print('[2] No')
 
-    opcion = input('\nSeleccione una opción [1 o 2]: ')
     opcion_valida = False
-    while opcion == False:
+    while opcion_valida == False:
+        opcion = input('\nSeleccione una opción [1 o 2]: ')
         if opcion == '1':
             print(listar_servicios())
             id = int(input(obtener_entero_valido('Ingrese el ID del servicio solicitado: ')))
