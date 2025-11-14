@@ -17,8 +17,9 @@ def crear_reserva():
     fecha_entrada = ingresar_fecha_entrada()
     fecha_salida = ingresar_fecha_salida()
     total = 100
+    habilitado = True
 
-    nueva_reserva = Reserva(id_huesped=huesped, id_habitacion=habitacion, id_descuento=descuento, id_servicio=servicio, fecha_entrada=fecha_entrada, fecha_salida=fecha_salida, total=total)
+    nueva_reserva = Reserva(id_huesped=huesped, id_habitacion=habitacion, id_descuento=descuento, id_servicio=servicio, fecha_entrada=fecha_entrada, fecha_salida=fecha_salida, total=total, habilitado=habilitado)
     insertar_objeto(nueva_reserva)
     modificar_habitacion_hab(habitacion)
 

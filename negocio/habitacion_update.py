@@ -5,7 +5,6 @@ def modificar_habitacion_hab(id):
     
     habitacion_encontrado = obtener_habitacion_id(id)
     if habitacion_encontrado:
-        id_habitacion = id
-        if id_habitacion != '':
-            habitacion_encontrado.id = id_habitacion
+        habilitado = 0
+        habitacion_encontrado.habilitado = habilitado
         modificar_objeto()

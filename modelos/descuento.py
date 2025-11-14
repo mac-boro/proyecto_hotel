@@ -5,6 +5,6 @@ class Descuento(Base):
     __tablename__ = "descuento"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
+    nombre = Column(String(250), nullable=False)
     porcentaje = Column(Integer, nullable=False)
-    descripcion = Column(String(250), nullable=False)
     habilitado = Column(Boolean, nullable=False)

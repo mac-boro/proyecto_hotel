@@ -27,7 +27,7 @@ def solicitar_descuento():
         opcion = input('\nSeleccione una opción [1 o 2]: ')
         if opcion == '1':
             print(listar_descuentos())
-            id = int(input(obtener_entero_valido('Ingrese el ID del descuento solicitado: ')))
+            id = obtener_entero_valido('Ingrese el ID del descuento solicitado: ')
             opcion_valida = True
             return(id)
         elif opcion == '2':
