@@ -1,7 +1,8 @@
 from datos.conexion import sesion
 
-def modificar_objeto():
+def modificar_objeto(objeto):
     try:
+        sesion.merge(objeto)
         sesion.commit()
         print("El objeto se ha actualizado correctamente.")
     except Exception as e:

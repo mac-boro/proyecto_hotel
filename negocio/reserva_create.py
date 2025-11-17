@@ -9,7 +9,7 @@ from ui.iu_descuento import solicitar_descuento
 from ui.iu_reserva import ingresar_fecha_entrada, ingresar_fecha_salida
 
 def crear_reserva():
-    print(lista_habitaciones())
+    lista_habitaciones()
     habitacion = ingresar_habitacion_reserva()
     huesped = insertar_huesped_reserva()
     servicio = solicitar_servicio()

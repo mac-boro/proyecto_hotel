@@ -4,7 +4,7 @@ def obtener_entero_valido(mensaje):
     while valor_valido is None:
         valor_str = input(mensaje)
         if valor_str.isdigit():
-            valor_valido = valor_str
+            valor_valido = int(valor_str)
         else:
             print("❗ Entrada inválida. Por favor, ingrese solo números (dígitos).")
     return valor_valido
